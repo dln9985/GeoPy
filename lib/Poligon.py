@@ -28,7 +28,7 @@ class Poligono:
                 return "No reconozco tu poligono :("
     
     def Perimeter(self):
-        return f"El perimetro de tu poligono es de {self.Numlado * self.Sizelado} centimetros [cm]"
+        return self.Numlado * self.Sizelado 
             
 # ------ Final
     
@@ -42,4 +42,17 @@ class PoligonoRegular( Poligono ):
         return f"Número de lados: {self.Numlado}, Tamaño de los lados: {self.Sizelado}, Apotema: {self.Apotema}"
     
     def AreaPoly(self):
-        return f"El área de tu poligono es de {self.Numlado * self.Sizelado * self.Apotema/2} centimetros cuadrados [cm^2]"
+        area = ((self.Apotema)*(super().Perimeter()))/2
+        return area
+    
+    def revArea(self):
+        if self.AreaPoly() >= 2000:
+            return "Si"
+        else:
+            return "No"
+    
+    def Color( self,color ):
+        self.color = color
+        return f"El color es: {self.color}"
+        
+        

@@ -27,8 +27,8 @@ print("")
 obj_poly_1 = Poligono(5,18)
 print(obj_poly_1)
 
-print(f"Número de lados: {obj_poly_1.Numlado } ")
-print(f"Tamaño de los lados: {obj_poly_1.Sizelado } ")
+print(f"1) Número de lados: {obj_poly_1.Numlado } ")
+print(f"2) Tamaño de los lados: {obj_poly_1.Sizelado } ")
 print(obj_poly_1.Figure() )
 
 print(obj_poly_1.Perimeter())
@@ -38,7 +38,24 @@ print("")
 obj_poly_2 = PoligonoRegular(9,15,30)
 print(obj_poly_2)
 print(obj_poly_2.Figure())
-print(obj_poly_2.Perimeter() )
-print(obj_poly_2.AreaPoly() )
+print(f"El perimetro de tu poligono es de {obj_poly_2.Perimeter()} centimetros [cm]")
 
+print(f"El área de tu poligono es de {obj_poly_2.AreaPoly()} centimetros cuadrados [cm^2]")
+print(f"¿El área es mayor a 2000? Respuesta: {obj_poly_2.revArea()} ")
+
+obj_poly_2.Color("Rojo Vino")
+print(obj_poly_2.color)
+
+num1="10"
+num2=0
+
+try:
+    div = num1 / num2
+#except ZeroDivisionError:
+    #print("¿¡¿¡¿Acaso quieres que colapse el universo al dividir entre 0?!?!?")
+#except TypeError:
+    #print("No puedes dividir Strings entre Números")"""
+except Exception as e:
+    print(f"Error desconocido: {e} ")
+    
 print("")
