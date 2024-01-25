@@ -57,5 +57,7 @@ try:
     #print("No puedes dividir Strings entre Números")"""
 except Exception as e:
     print(f"Error desconocido: {e} ")
+
+print("A perro traes el omnitrix")
     
 print("")
