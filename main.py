@@ -59,5 +59,6 @@ except Exception as e:
     print(f"Error desconocido: {e} ")
 
 print("A perro traes el omnitrix")
+print("El gansito ya casi cuesta 30 pesos :(")
     
 print("")
