@@ -1,14 +1,17 @@
-class Rectangulo:
-    def __init__(self, largo, ancho):
-        self.largo = largo
-        self.ancho = ancho
+class Articulo:
+    def __init__(self, idArt, marca, nombre, precio=None, peso=None, dcto=None, inv=None):
+        self.id = idArt
+        self.marca = marca
+        self.nombre = nombre
+        self.precio = precio
+        self.peso = peso
+        self.dcto = dcto
+        self.inv = inv
         pass
     
     def __str__(self):
-        return f"Rectángulo de largo {self.largo} y ancho {self.ancho}"
+        return f"Id del producto: |{self.id}| Marca: |{self.marca}| Nombre: |{self.nombre}| Precio (p/pza): |{self.precio}| Peso: |{self.peso}| Descuento: |{self.dcto}| Inventario Disponible: |{self.inv}|"
     
-    def area(self):
-        return (self.largo * self.ancho)
-    
-    def perimetro(self):
-        return 2*(self.largo + self.ancho)
+    def setPrecio(self, price):
+        self.precio = price
+        pass
