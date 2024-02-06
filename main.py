@@ -70,20 +70,20 @@ Art1.setPrecio(25.00)
 Art1.setPeso(500)
 Art1.setDcto(10)
 Art1.setInv(15)
-print(Art1)
+#print(Art1)
 
 Art2=Articulo(70256950476, "Coca Cola", "Fanta 600 ml")
 Art2.setPrecio(17.00) 
 Art2.setPeso(600)
 Art2.setInv(30)
-print(Art2)
+#print(Art2)
 
 Art3=Articulo(70256950450, "Coca Cola", "Topo Chico 1.5 L")
 Art3.setPrecio(33.00) 
 Art3.setPeso(1500)
 Art3.setDcto(20)
-Art3.setInv(5)
-print(Art3)
+
+#print(Art3)
 
 print("")
 
@@ -91,11 +91,11 @@ cart1=Carrito("ABC123")
 cart2=Carrito("DEF456")
 cart3=Carrito("GHI789")
 
-cart1.addArt( Art1.idArt )
-cart1.addArt( Art2.idArt )
-cart1.addArt( Art3.idArt )
+cart1.addArt( Art1 )
+cart1.addArt( Art1 )
+cart1.addArt( Art1 )
+cart1.addArt( Art2 )
+cart1.addArt( Art3 )
 print(cart1)
 
-print(cart2)
-
-print("")
+print(f"Carrito: {cart1.idCart}\nTotal: {cart1.getTotal()}")

@@ -31,24 +31,39 @@ class Articulo:
     def getPriceDcto(self):
         if self.dcto != None:
             PricewDcto = self.precio - (self.precio * (self.dcto/100))
-        else:    
+        else: 
+            PricewDcto = self.precio   
             return PricewDcto
     
 class Carrito():
     def __init__(self, idCart):
         self.idCart = idCart
-        self.articulos = []
+        self.objarticulos = []
         pass
     
     def __str__(self):
         printCarrito = f"Codigo en serie del carrito: {self.idCart} \n"
-        if len(self.articulos) >= 1:
-            for i in range(0, len(self.articulos),1 ):
-                printCarrito += f"Articulo: {self.articulos[i]} \n"
+        if len(self.objarticulos) >= 1:
+            for i in range(0, len(self.objarticulos),1 ):
+                printCarrito += f"Articulo: {self.objarticulos[i]} \n"
         else:
                 printCarrito += f"Carrito Vacio " 
         return printCarrito
     
-    def addArt(self, idArt):
-        self.articulos.append( idArt )
+    def addArt(self, ObjArt):
+        if type(ObjArt.inv) != type(None):    
+            if ObjArt.inv >= 1:
+                ObjArt.inv -= 1
+                self.objarticulos.append( ObjArt )
+            else:
+                print("No hay inventario disponible")
+        else:
+            print("Inventario No definido")
         return 0
+    
+    def getTotal(self):
+        Total = 0
+        for i in range(0, len(self.objarticulos), 1 ):
+            Total += self.objarticulos[i].getPriceDcto()
+        
+        return Total
