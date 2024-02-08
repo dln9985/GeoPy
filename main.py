@@ -66,9 +66,9 @@ print("Área: "+str(obj_rect_3.area())+"[cm^2]")"""
 print("")
 
 Art1=Articulo(70256950439, "Coca Cola", "Canada Dry 500 ml")
-Art1.setPrecio(25.00) 
+Art1.setPrecio(25.0) 
 Art1.setPeso(500)
-Art1.setDcto(10)
+Art1.setDcto(10.0)
 Art1.setInv(15)
 #print(Art1)
 
@@ -82,6 +82,7 @@ Art3=Articulo(70256950450, "Coca Cola", "Topo Chico 1.5 L")
 Art3.setPrecio(33.00) 
 Art3.setPeso(1500)
 Art3.setDcto(20)
+Art3.setInv(50)
 
 #print(Art3)
 
@@ -96,6 +97,8 @@ cart1.addArt( Art1 )
 cart1.addArt( Art1 )
 cart1.addArt( Art2 )
 cart1.addArt( Art3 )
-print(cart1)
 
-print(f"Carrito: {cart1.idCart}\nTotal: {cart1.getTotal()}")
+printTicket(cart1)
+printTicket(cart2)
+printTicket(cart3)
+print("")
